@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: RAW_ADVENTURE_WORKS
+    tables:
+      - name: SalesOrderHeader  
+      - name: SalesOrderDetail
+      - name: Product
+      - name: CreditCard
+      - name: SalesReason 
+      - name: Address
+      - name: Customer
+      - name: Person
+      - name: SalesPerson
+      - name: Employee
+      - name: Countryregion
+      - name: Stateprovince
+    
