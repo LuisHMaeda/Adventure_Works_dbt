@@ -1,12 +1,13 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: erp
     schema: RAW_ADVENTURE_WORKS
     tables:
       - name: SalesOrderHeader  
       - name: SalesOrderDetail
       - name: Product
+        description: "Tabela com informações dos produtos"
       - name: CreditCard
       - name: SalesReason 
       - name: Address
