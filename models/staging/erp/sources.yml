@@ -7,14 +7,17 @@ sources:
       - name: SalesOrderHeader  
       - name: SalesOrderDetail
       - name: Product
-        description: "Tabela com informações dos produtos"
+        description: "Tabela com informações dos produtos."
       - name: CreditCard
+        description: "Tabela com informações dos cartões de crédito."
       - name: SalesReason 
+        description: "A tabela armazena informações sobre os motivos de venda que podem estar associados a cada pedido de venda."
       - name: Address
       - name: Customer
+        description: "A tabela armazena informações sobre os clientes da empresa."
       - name: Person
+        description: "Armazena informações com detalhes sobre as pessoas"
       - name: SalesPerson
-      - name: Employee
       - name: Countryregion
       - name: Stateprovince
     
