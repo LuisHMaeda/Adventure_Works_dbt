@@ -7,29 +7,125 @@ sources:
       - name: SalesOrderHeader  
         description: "A tabela armazena informações essenciais sobre os pedidos de venda."
 
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
+
+          - name: customerid
+            tests:
+              - not_null
+                
+
       - name: SalesOrderDetail
         description: "A tabela armazena informações detalhadas sobre os pedidos de venda."
+
+        columns:
+          - name: salesorderdetailid
+            tests:
+              - unique
+              - not_null
+
+          - name: productid
+          - name: salesorderid
+            tests:
+              - not_null
+
 
       - name: Product
         description: "A tabela com informações dos produtos."
 
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
+
+
       - name: CreditCard
         description: "A tabela com informações dos cartões de crédito."
+        
+        columns:
+          - name: creditcardid
+            tests:
+              - unique
+              - not_null
+
 
       - name: SalesReason 
         description: "A tabela armazena informações sobre os motivos de venda que podem estar associados a cada pedido de venda."
 
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
+
+
       - name: Address
         description: "A tabela armazena informações sobre os endereços"
+
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
+
+          - name: stateprovinceid
+            tests:
+              - not_null
+
 
       - name: Customer
         description: "A tabela armazena informações sobre os clientes da empresa."
 
+        columns:
+          - name: customerid
+            tests:
+              - unique
+              - not_null
+
+          - name: personid  
+          - name: storeid
+          - name: territoryid
+            tests:
+              - not_null
+                        
+
       - name: Person
         description: "Armazena informações com detalhes sobre as pessoas."
+
+        columns:
+          - name: businessentityid
+            tests:
+              - not_null
+              - unique
+
 
       - name: Countryregion
         description: "A tabela armazena informações sobre países e regiões."
 
+        columns:
+          - name: countryregioncode
+            tests:
+              - not_null
+              - unique
+
+
+
+
       - name: Stateprovince
         description: "A tabela armazena informações sobre estados ou províncias."
+
+        columns:
+          - name: stateprovinceid
+            tests:
+              - unique
+              - not_null
+        
+          - name: countryregioncode
+          - name: territoryid
+            tests:
+              - not_null
+                  
