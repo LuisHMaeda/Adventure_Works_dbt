@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: dim_produtos
+    description: "Tabela dimensão dos produtos da adventure works"
+    columns:
+      - name: pk_produto
+        description: "chave primária do produto"
+        tests: 
+          - unique
+          - not_null
+
+      - name: nm_produto
+        description: "nome do produto"
+
+      - name: codigo_produto
+        description: "codigo do produto"
+
+      - name: produto_fabricado
+        description: "indica se o  produto é fabricado internamente"
+
+      - name: produto_acabado
+        description: "indica se é um produto acabado"
+
+      - name: cor
+        description: "cor do produto"
+
+      - name: custo_padrao
+        description: "custo padrão do produto para a empresa"
+
+      - name: preco_tabela
+        description: "preco de tabela para os clientes"
+
+      - name: tamanho
+        description: "tamanho do produto"
+
+      - name: cd_tamanho_unidade_medida
+        description: "código da unidade de medida do tamanho do produto"
+
+      - name: cd_peso_unidade_Medida
+        description: "código da unidade de medida do peso do produto"
+
+      - name: peso
+        description: "peso do produto"
+
+      - name: dias_para_fabricar
+        description: "numero de dias necessários para fabricar o produto"
+
+      - name: linha_produto
+        description: "linha do produto"
+
+      - name: classe
+        description: "classe do produto"
+
+      - name: estilo
+        description: "estilo do produto"
+
+      - name: data_inicio_venda
+        description: "data em que o produto começou a ser vendido"
+
+      - name: data_fim_venda
+        description: "data em que o produto deixou de ser vendido"
+
+      - name: data_descontinuado
+        description: "data em que o produto foi descontinuado"
