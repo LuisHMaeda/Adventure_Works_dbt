@@ -5,19 +5,32 @@ sources:
     schema: RAW_ADVENTURE_WORKS
     tables:
       - name: SalesOrderHeader  
+        description: "A tabela armazena informações essenciais sobre os pedidos de venda."
+
       - name: SalesOrderDetail
+
       - name: Product
-        description: "Tabela com informações dos produtos."
+        description: "A tabela com informações dos produtos."
+
       - name: CreditCard
-        description: "Tabela com informações dos cartões de crédito."
+        description: "A tabela com informações dos cartões de crédito."
+
       - name: SalesReason 
         description: "A tabela armazena informações sobre os motivos de venda que podem estar associados a cada pedido de venda."
+
       - name: Address
+        description: "A tabela armazena informações sobre os endereços"
+
       - name: Customer
         description: "A tabela armazena informações sobre os clientes da empresa."
+
       - name: Person
-        description: "Armazena informações com detalhes sobre as pessoas"
+        description: "Armazena informações com detalhes sobre as pessoas."
+
       - name: SalesPerson
+
       - name: Countryregion
+        description: "A tabela armazena informações sobre países e regiões."
+
       - name: Stateprovince
-    
+        description: "A tabela armazena informações sobre estados ou províncias."
