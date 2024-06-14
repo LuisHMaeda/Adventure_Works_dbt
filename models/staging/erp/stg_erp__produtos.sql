@@ -24,7 +24,7 @@ produtos as (
         , cast(weightunitmeasurecode as varchar) as cd_peso_unidade_Medida
         , cast(weight as int) as peso
         , cast(daystomanufacture as int) as dias_para_fabricar
-        , cast(productline as varchar) as _linha_produto
+        , cast(productline as varchar) as linha_produto
         , cast(class as varchar) as classe
         , cast(style as varchar) as estilo
         , cast(productsubcategoryid as int) as fk_subcategoria

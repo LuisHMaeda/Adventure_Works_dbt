@@ -8,6 +8,7 @@ sources:
         description: "A tabela armazena informações essenciais sobre os pedidos de venda."
 
       - name: SalesOrderDetail
+        description: "A tabela armazena informações detalhadas sobre os pedidos de venda."
 
       - name: Product
         description: "A tabela com informações dos produtos."
@@ -26,8 +27,6 @@ sources:
 
       - name: Person
         description: "Armazena informações com detalhes sobre as pessoas."
-
-      - name: SalesPerson
 
       - name: Countryregion
         description: "A tabela armazena informações sobre países e regiões."
