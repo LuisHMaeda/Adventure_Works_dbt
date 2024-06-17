@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description: "Tabela dimensão dos clientes da adventure works"
+    columns:
+      - name: pk_cliente
+        description: "Chave primária do cliente"
+        tests:
+          - unique
+          - not_null
+        
+      - name: primeiro_nome
+        description: "Primeiro nome do cliente"
+
+      - name: nome_do_meio
+        description: "Nome do meio do cliente"
+
+      - name: ultimo_nome
+        description: "Ultimo nome do cliente"
+
+      - name: sufixo
+        description: "Sufixo do cliente"
+
+      - name: titulo
+        description: "Titulo do cliente"
+

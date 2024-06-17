@@ -5,7 +5,6 @@ with
     )
 
 select 
-    /* chaves */
     pk_produto
     , nm_produto
     , codigo_produto
