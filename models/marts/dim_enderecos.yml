@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_enderecos
+    description: "Tabela dimensão dos endereços contendo o estado/provincia e o país"
+    columns:
+      - name: pk_endereco
+        description: "Chave primária da tabela de endereços"
+        tests:
+          - unique
+          - not_null
+      
+      - name: endereco_linha_1
+        description: "Primeira linha do endereço"
+
+      - name: endereco_linha_2
+        description: "Segunda linha do endereço"
+
+      - name: cidade
+        description: "Nome da cidade"
+        tests:
+          - not_null
+      
+      - name: codigo_postal
+        description: "Código postal do endereço"
+
+      - name: localizacao_espacial
+        description: "Localização espacial do endereço"
+
+      - name: cd_estado_provincia
+        description: "Código do estado/província"
+
+      - name: nm_estado_provincia
+        description: "Nome do estado/província"
+        tests:
+          - not_null
+
+      - name: apenas_estado_provincia
+        description: "Indica se é apenas estado/provincia"
+
+      - name: nm_pais_regiao
+        description: "Nome do país/região"
+        tests:
+          - not_null
