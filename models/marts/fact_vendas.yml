@@ -1,0 +1,104 @@
+version: 2
+
+models:
+  - name: fact_vendas
+    description: "Tabela com as vendas da adventure works."
+
+    columns:
+    
+      - name: sk_vendas
+        description: "Chave primária da tabela de vendas"
+        tests:
+          - unique
+          - not_null
+
+      - name: fk_cliente
+        description: "Chave estrangeira da tabela de clientes"
+        tests:
+          - not_null
+
+      - name: fk_representante_vendas
+        description: "Chave estrangeira da tabela de representantes de vendas"
+
+      - name: fk_territorio
+        description: "Chave estrangeira da tabela de territorios"
+
+      - name: fk_endereco_pagamento
+        description: "Chave estrangeira da tabela de endereços"
+
+      - name: fk_endereco_envio
+        description: "Chave estrangeira da tabela de endereços"
+        tests:
+          - not_null
+
+      - name: fk_metodo_envio
+        description: "Chave estrangeira da tabela de metodos de envio"
+        tests:
+          - not_null
+
+      - name: fk_cartoes_credito
+        description: "Chave estrangeira da tabela de cartões de crédito"
+
+      - name: fk_produto
+        description: "Chave estrangeira da tabela de produtos"
+        tests:
+          - not_null
+
+      - name: fk_oferta_especial
+        description: "Chave estrangeira da tabela de ofertas"
+
+      - name: fk_taxa_cambio
+        description: "Chave estrangeira da tabela de taxas de cambio"
+
+      - name: data_pedido
+        description: "Data do pedido"
+
+      - name: data_vencimento
+        description: "Data do vencimento do pedido"
+
+      - name: data_envio
+        description: "Data de envio do pedido"
+
+      - name: numero_rastreamento
+        description: "Numero de rastreamento"
+
+      - name: quantidade_pedido
+        description: "Quantidade de produtos"
+
+      - name: preco_unitario
+        description: "Preco unitario do produto"
+
+      - name: desconto_preco_unitario
+        description: "Desconto no preco unitario"
+
+      - name: status
+        description: "Status do pedido"
+
+      - name: pedido_online
+        description: "Indica se é um pedido online"
+
+      - name: numero_compra
+        description: "Numero da compra"
+
+      - name: codigo_aprovacao
+        description: "Codigo de aprovação do cartão de crédito"
+
+      - name: comentario
+        description: "Comentario sobre o pedido"
+
+      - name: subtotal_rateado
+        description: "Subtotal rateado entre os itens no mesmo pedido"
+        tests:
+          - not_null
+
+      - name: numero_revisoes_rateado
+        description: "Numero de revisões/alterações realizadas no pedido ao longo do tempo, rateado entre os itens no mesmo pedido"
+
+      - name: imposto_rateado
+        description: "Imposto rateado entre os itens no mesmo pedido"
+
+      - name: frete_rateado
+        description: "Frete rateado entre os itens no mesmo pedido"
+
+      - name: total_custo_rateado
+        description: "Total do custo rateado entre os itens no mesmo pedido"
