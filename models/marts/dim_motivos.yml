@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_motivos
+    description: "Tabela dimensão contendo os motivos de venda"
+    columns:
+      - name: pk_motivo_venda
+        description: "Chave primária da tabela de motivos"
+        tests:
+          - unique
+          - not_null
+    
+      - name: nm_motivo_venda
+        description: "Nome do motivo"
+        tests:
+          - not_null
+      
+      - name: tipo_motivo
+        description: "Tipo do motivo"
+        tests:
+          - not_null
+              
