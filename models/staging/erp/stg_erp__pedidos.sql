@@ -6,15 +6,15 @@ source as (
 
 ),
 
-renamed as (
+pedidos as (
 
     select
         cast(salesorderid as int) as pk_pedido
-        , cast(revisionnumber as int) as numero_revisao
+        , cast(revisionnumber as int) as numero_revisoes
         , TO_CHAR(cast(orderdate as date)::DATE,'DD/MM/YYYY') as  data_pedido
         , TO_CHAR(cast(duedate as date)::DATE,'DD/MM/YYYY') as  data_vencimento
         , TO_CHAR(cast(shipdate as date)::DATE,'DD/MM/YYYY') as  data_envio
-        , cast(status as int) as status
+        , cast(status as varchar) as status
         , cast(onlineorderflag as boolean) as pedido_online
         , cast(purchaseordernumber as varchar) as numero_compra
         , cast(accountnumber as varchar) as numero_conta
@@ -30,7 +30,7 @@ renamed as (
         , cast(subtotal as float) as subtotal
         , cast(taxamt as float) as imposto
         , cast(freight as float) as frete
-        , cast(totaldue as float) as total_pedido_venda
+        , cast(totaldue as float) as total_custo
         , cast(comment as varchar) as comentario
         , cast(rowguid as varchar) as rowguid
         , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
@@ -39,4 +39,4 @@ renamed as (
 
 )
 
-select * from renamed
+select * from pedidos
