@@ -6,7 +6,7 @@ source as (
 
 ),
 
-renamed as (
+estados_provincias as (
 
     select
         cast(stateprovinceid as int) as pk_estado_provincia
@@ -22,4 +22,4 @@ renamed as (
 
 )
 
-select * from renamed
+select * from estados_provincias
