@@ -21,7 +21,7 @@ with
             , fk_taxa_cambio
 
             /*Datas*/
-            , data_pedido
+            , cast(data_pedido as date) as data_pedido
             , data_vencimento
             , data_envio
 
@@ -62,6 +62,8 @@ with
                 total_custo / count(fk_pedido) over(partition by fk_pedido)  
                 as numeric(18,2)
             ) as total_custo_rateado
+
+            , preco_unitario*quantidade_pedido as faturamento_bruto
 
         from itens_por_pedido
     )
