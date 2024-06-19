@@ -1,8 +1,7 @@
 with   
     itens_por_pedido as (
         select *
-        from {{ref("int_itens_por_pedido")}}
-
+        from {{ref('int_itens_por_pedido')}}
     )
 
     , metricas as (
@@ -21,7 +20,7 @@ with
             , fk_taxa_cambio
 
             /*Datas*/
-            , data_pedido as data_pedido
+            , data_pedido
             , data_vencimento
             , data_envio
 
@@ -43,10 +42,7 @@ with
                 as numeric(18,2)
             ) as subtotal_rateado
 
-            , cast(
-                numero_revisoes / count(fk_pedido) over(partition by fk_pedido)
-                as numeric(18,2)
-            ) as numero_revisoes_rateado
+            , (numero_revisoes / count(fk_pedido) over(partition by fk_pedido)) as numero_revisoes_rateado
 
             , cast(
                 imposto / count(fk_pedido) over(partition by fk_pedido)
@@ -67,6 +63,7 @@ with
 
         from itens_por_pedido
     )
-    select * 
-    from metricas
+
+select * 
+from metricas
  
