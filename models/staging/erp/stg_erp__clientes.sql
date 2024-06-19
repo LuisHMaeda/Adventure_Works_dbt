@@ -14,7 +14,7 @@ clientes as (
         , cast(storeid as varchar) as fk_loja
         , cast(territoryid as varchar) as fk_territorio
         , cast(rowguid as varchar) as rowguid
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
 
     from source
 

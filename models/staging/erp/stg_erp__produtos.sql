@@ -29,11 +29,11 @@ produtos as (
         , cast(style as varchar) as estilo
         , cast(productsubcategoryid as int) as fk_subcategoria
         , cast(productmodelid as int) as fk_modelo_produto
-        , TO_CHAR(cast(sellstartdate as date)::DATE,'DD/MM/YYYY') as data_inicio_venda
-        , TO_CHAR(cast(sellenddate as date)::DATE,'DD/MM/YYYY') as data_fim_venda
+        , cast(sellstartdate as date) as data_inicio_venda
+        , cast(sellenddate as date) as data_fim_venda
         , cast(discontinueddate as varchar) as data_descontinuado
         , cast(rowguid as varchar) as rowguid
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
     from source
 
 )

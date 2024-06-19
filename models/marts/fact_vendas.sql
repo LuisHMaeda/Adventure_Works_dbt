@@ -21,7 +21,7 @@ with
             , fk_taxa_cambio
 
             /*Datas*/
-            , cast(data_pedido as date) as data_pedido
+            , data_pedido as data_pedido
             , data_vencimento
             , data_envio
 

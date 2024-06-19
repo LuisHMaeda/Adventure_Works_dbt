@@ -21,7 +21,7 @@ pessoas as (
         , cast(additionalcontactinfo as varchar) as informacoes_adicionais
         , cast(demographics as varchar) as informacoes_demograficas
         , cast(rowguid as varchar) as rowguide
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
 
 
     from source

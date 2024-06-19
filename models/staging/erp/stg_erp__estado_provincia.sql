@@ -16,7 +16,7 @@ estados_provincias as (
         , cast(name as varchar) as nm_estado_provincia
         , cast(territoryid as int) as fk_territorio
         , cast(rowguid as varchar) as rowguid
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
 
     from source
 
