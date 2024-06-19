@@ -14,7 +14,7 @@ cartoes as (
         , cast(cardnumber as int) as numero_cartao
         , cast(expmonth as int) as mes_expiracao
         , cast(expyear as int) as ano_expiracao
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
     from source
 
 )

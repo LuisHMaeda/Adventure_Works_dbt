@@ -17,7 +17,7 @@ enderecos as (
         , cast(postalcode as varchar) as codigo_postal
         , cast(spatiallocation as varchar) as localizacao_espacial
         , cast(rowguid as varchar) as rowguid
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
 
     from source
 

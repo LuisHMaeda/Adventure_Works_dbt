@@ -11,10 +11,9 @@ pedidos as (
     select
         cast(salesorderid as int) as pk_pedido
         , cast(revisionnumber as int) as numero_revisoes
-        --, TO_CHAR(cast(orderdate as date)::DATE,'DD/MM/YYYY') as  data_pedido
         , cast(orderdate as date) as data_pedido
-        , TO_CHAR(cast(duedate as date)::DATE,'DD/MM/YYYY') as  data_vencimento
-        , TO_CHAR(cast(shipdate as date)::DATE,'DD/MM/YYYY') as  data_envio
+        , cast(duedate as date) as  data_vencimento
+        , cast(shipdate as date) as  data_envio
         , cast(status as varchar) as status
         , cast(onlineorderflag as boolean) as pedido_online
         , cast(purchaseordernumber as varchar) as numero_compra
@@ -34,7 +33,7 @@ pedidos as (
         , cast(totaldue as float) as total_custo
         , cast(comment as varchar) as comentario
         , cast(rowguid as varchar) as rowguid
-        , TO_CHAR(cast(MODIFIEDDATE as date)::DATE,'DD/MM/YYYY') as  data_modificacao
+        , cast(MODIFIEDDATE as date) as  data_modificacao
 
     from source
 
