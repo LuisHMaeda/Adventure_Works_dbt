@@ -11,7 +11,8 @@ pedidos as (
     select
         cast(salesorderid as int) as pk_pedido
         , cast(revisionnumber as int) as numero_revisoes
-        , TO_CHAR(cast(orderdate as date)::DATE,'DD/MM/YYYY') as  data_pedido
+        --, TO_CHAR(cast(orderdate as date)::DATE,'DD/MM/YYYY') as  data_pedido
+        , cast(orderdate as date) as data_pedido
         , TO_CHAR(cast(duedate as date)::DATE,'DD/MM/YYYY') as  data_vencimento
         , TO_CHAR(cast(shipdate as date)::DATE,'DD/MM/YYYY') as  data_envio
         , cast(status as varchar) as status
