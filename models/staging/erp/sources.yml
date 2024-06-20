@@ -128,4 +128,16 @@ sources:
           - name: territoryid
             tests:
               - not_null
-                  
+
+
+      - name: Salesorderheadersalesreason
+        description: "Tabela de referência cruzada que mapeia pedidos de vendas para códigos de motivo de vendas."
+
+        columns:
+          - name: salesorderid
+            tests:
+              - not_null
+
+          - name: salesreasonid
+            tests:
+              - not_null
