@@ -11,6 +11,11 @@ with
 
     )
 
+    , motivos as (
+        select *
+        from {{ ref('stg_erp__ref_pedidos_motivos') }}
+    )
+
     ,joined as (
         select
             /*Chaves*/
@@ -26,7 +31,8 @@ with
             , detalhes.fk_produto
             , detalhes.fk_oferta_especial
             , pedidos.fk_taxa_cambio
-    
+            , motivos.fk_motivo_venda
+            
             , detalhes.numero_rastreamento
             , detalhes.quantidade_pedido
             , detalhes.preco_unitario
@@ -54,14 +60,14 @@ with
             , pedidos.total_custo
             , pedidos.comentario
 
-        from pedidos_detalhes as detalhes
-        left join pedidos on detalhes.fk_pedido = pedidos.pk_pedido
-
+        from pedidos
+        left join pedidos_detalhes as detalhes on detalhes.fk_pedido = pedidos.pk_pedido
+        left join motivos on pedidos.pk_pedido = motivos.fk_pedido
     )
 
     , criada_chave_primaria as (
         select 
-            cast(fk_pedido as varchar) || '-' || cast(fk_produto as varchar) as sk_vendas /*surrogate key*/
+            cast(fk_pedido as varchar) || '-' || cast(fk_produto as varchar) || '-' || coalesce(cast(fk_motivo_venda as varchar),'') as sk_vendas /*surrogate key*/
             , *
         from joined
     )

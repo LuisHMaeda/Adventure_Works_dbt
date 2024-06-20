@@ -26,3 +26,4 @@ pedidos_detalhes as (
 
 select *
 from pedidos_detalhes
+

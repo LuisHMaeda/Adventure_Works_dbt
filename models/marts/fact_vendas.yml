@@ -62,11 +62,11 @@ models:
       - name: numero_rastreamento
         description: "Numero de rastreamento"
 
-      - name: quantidade_pedido
+      - name: quantidade_pedido_rateado
         description: "Quantidade de produtos"
 
-      - name: preco_unitario
-        description: "Preco unitario do produto"
+      - name: preco_unitario_rateado
+        description: "Preco unitario do produto rateado entre os itens no mesmo pedido"
 
       - name: desconto_preco_unitario
         description: "Desconto no preco unitario"
