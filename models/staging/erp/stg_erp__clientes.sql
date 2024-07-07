@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('erp', 'Customer') }}
+    select * from {{ source('sap', 'CUSTOMERS') }}
 
 ),
 
