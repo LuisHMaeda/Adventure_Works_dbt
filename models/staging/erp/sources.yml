@@ -4,7 +4,7 @@ sources:
   - name: erp
     schema: RAW_ADVENTURE_WORKS
     tables:
-      - name: SalesOrderHeader  
+      - name: SALESORDERHEADER  
         description: "A tabela armazena informações essenciais sobre os pedidos de venda."
 
         columns:
@@ -32,7 +32,6 @@ sources:
             tests:
               - not_null
 
-
       - name: Product
         description: "A tabela com informações dos produtos."
 
@@ -41,7 +40,6 @@ sources:
             tests:
               - unique
               - not_null
-
 
       - name: CreditCard
         description: "A tabela com informações dos cartões de crédito."
@@ -52,7 +50,6 @@ sources:
               - unique
               - not_null
 
-
       - name: SalesReason 
         description: "A tabela armazena informações sobre os motivos de venda que podem estar associados a cada pedido de venda."
 
@@ -61,7 +58,6 @@ sources:
             tests:
               - unique
               - not_null
-
 
       - name: Address
         description: "A tabela armazena informações sobre os endereços"
@@ -76,23 +72,7 @@ sources:
             tests:
               - not_null
 
-
-      - name: Customer
-        description: "A tabela armazena informações sobre os clientes da empresa."
-
-        columns:
-          - name: customerid
-            tests:
-              - unique
-              - not_null
-
-          - name: personid  
-          - name: storeid
-          - name: territoryid
-            tests:
-              - not_null
                         
-
       - name: Person
         description: "Armazena informações com detalhes sobre as pessoas."
 
@@ -102,7 +82,6 @@ sources:
               - not_null
               - unique
 
-
       - name: Countryregion
         description: "A tabela armazena informações sobre países e regiões."
 
@@ -111,8 +90,6 @@ sources:
             tests:
               - not_null
               - unique
-
-
 
 
       - name: Stateprovince
@@ -140,4 +117,17 @@ sources:
 
           - name: salesreasonid
             tests:
+              - not_null
+              
+  - name: sap
+    schema: DBT_LMAEDAAW
+    tables:
+
+      - name: CUSTOMERS
+        description: "A tabela armazena informações sobre os clientes da empresa."
+
+        columns:
+          - name: customerid
+            tests:
+              - unique
               - not_null
