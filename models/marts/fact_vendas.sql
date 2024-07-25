@@ -71,6 +71,11 @@
                 as numeric(18,4)
             ) as preco_unitario_rateado
 
+            , cast(
+                desconto_preco_unitario / count(fk_pedido||'-'||fk_produto) over(partition by fk_pedido||'-'||fk_produto)  
+                as numeric(18,4)
+            ) as desconto_preco_unitario_rateado
+
 
         from itens_por_pedido
     )
@@ -79,6 +84,7 @@
         select 
         *
         , quantidade_pedido*preco_unitario_rateado as faturamento_bruto
+        , (quantidade_pedido*preco_unitario_rateado) * (1-desconto_preco_unitario_rateado) as faturamento_liquido
         from metricas
     )
 
