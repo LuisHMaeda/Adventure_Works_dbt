@@ -1,15 +1,3 @@
-Welcome to your new dbt project!
+🚀 Projeto Adventures Works - Modern Analytics Stack
 
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Bem-vindo ao projeto Adventures Works - Modern Analytics Stack! Este repositório contém um projeto prático de Engenharia de Analytics que visa demonstrar a construção e implementação de uma plataforma de analytics moderna, conforme a metodologia do Modern Analytics Stack desenvolvida pela Indicium.
